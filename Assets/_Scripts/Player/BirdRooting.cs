@@ -90,8 +90,7 @@ public class BirdRooting : MonoBehaviour
     {
         if (IsCarrying == false)
             return;
-        nest.items.Add(item);
-        item.transform.parent = nest.transform;
+        nest.AddItem(item);
         item = null;
     }
 
