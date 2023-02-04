@@ -18,6 +18,12 @@ public class RootContainer : MonoBehaviour
     {
         if (item == null)
             quantity = 0;
+        ContainerManager.AddContainer(this);
+    }
+
+    private void OnDestroy()
+    {
+        ContainerManager.RemoveContainer(this);
     }
 
     public RootItem SpawnItem()
