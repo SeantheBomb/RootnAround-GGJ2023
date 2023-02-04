@@ -2199,9 +2199,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948642fe343783e4c87e43c3b22d6257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 900
-  sideForce: 100
-  downForce: 10
+  jumpForce:
+    _useConstant: 0
+    ConstantValue: 100
+    Variable: {fileID: 11400000, guid: ab8eb3230fd2c5044bb8a7a7305e5136, type: 2}
+  sideForce:
+    _useConstant: 0
+    ConstantValue: 100
+    Variable: {fileID: 11400000, guid: 2b30793f00a017343b939dddf738718d, type: 2}
+  downForce:
+    _useConstant: 0
+    ConstantValue: 10
+    Variable: {fileID: 11400000, guid: 06923325ba22dcd4f9d0d4255aaede20, type: 2}
   jumpKey: 32
 --- !u!114 &2111593610
 MonoBehaviour:
@@ -2216,6 +2225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxVelocity:
-    _useConstant: 1
+    _useConstant: 0
     ConstantValue: 10
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 688fe8ee002e9ac41bf83188769644d7, type: 2}

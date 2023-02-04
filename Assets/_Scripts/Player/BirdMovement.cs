@@ -1,3 +1,4 @@
+using Corrupted;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +9,9 @@ public class BirdMovement : MonoBehaviour
 {
 
     int direction = 1;
-    public float jumpForce = 100f;
-    public float sideForce = 100f;
-    public float downForce = 10f;
+    public FloatVariable jumpForce = 100f;
+    public FloatVariable sideForce = 100f;
+    public FloatVariable downForce = 10f;
 
     public KeyCode jumpKey = KeyCode.Space;
 
