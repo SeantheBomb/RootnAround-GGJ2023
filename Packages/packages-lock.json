@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.dbrizov.naughtyattributes": {
+      "version": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "8a8fa5a9659a6d63f196391c71e06c4286c8acd7"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.9",
       "depth": 1,
@@ -269,6 +276,13 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "corruptedmedia.corruptedcore": {
+      "version": "https://github.com/SeantheBomb/CorruptedCore.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e69c8941d8a29c8b59a5bd4956ca288f05bb13bc"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
