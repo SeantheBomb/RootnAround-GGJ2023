@@ -15,10 +15,7 @@ public class BirdRooting : MonoBehaviour
         get; protected set;
     }
 
-    public bool IsCarrying
-    {
-        get; protected set;
-    }
+    public bool IsCarrying => item != null;
 
     public RootContainer target
     {
@@ -75,8 +72,30 @@ public class BirdRooting : MonoBehaviour
     {
         yield return new WaitForSeconds(rootTime);
         item = target.SpawnItem();
-        item.transform.position = transform.position;
-        item.transform.SetParent(transform);
+        if (item != null)
+        {
+            item.transform.position = transform.position;
+            item.transform.SetParent(transform);
+        }
         StopRooting();
+    }
+
+    void DeliverItem(NestContainer nest)
+    {
+        if (IsCarrying == false)
+            return;
+        nest.items.Add(item);
+        item.transform.parent = nest.transform;
+        item = null;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        NestContainer nest = collision.GetComponentInParent<NestContainer>();
+        if(nest != null)
+        {
+            DeliverItem(nest);
+        }
     }
 }
