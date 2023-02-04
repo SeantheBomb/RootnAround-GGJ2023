@@ -19,7 +19,13 @@ public class NestEggView : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        SetView(count);
+        //SetView(count);
+        ObjectiveManager.OnStartLevel += SetView;
+    }
+
+    private void OnDestroy()
+    {
+        ObjectiveManager.OnStartLevel -= SetView;
     }
 
     public void SetView(int count)

@@ -6,6 +6,8 @@ using UnityEngine;
 public class NestContainer : MonoBehaviour
 {
 
+    public static System.Action<int> OnAddItem;
+
     public List<RootItem> items;
     Collider2D c;
 
@@ -23,6 +25,16 @@ public class NestContainer : MonoBehaviour
         }
         item.transform.parent = transform;
         item.transform.position = GetPlacePoint();
+        OnAddItem?.Invoke(items.Count);
+    }
+
+    public void ClearItems()
+    {
+        foreach(RootItem ri in items)
+        {
+            Destroy(ri.gameObject);
+        }
+        items.Clear();
     }
 
     Vector3 GetPlacePoint()
