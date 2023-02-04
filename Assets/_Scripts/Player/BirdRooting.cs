@@ -6,9 +6,13 @@ using UnityEngine;
 public class BirdRooting : MonoBehaviour
 {
 
+    public static System.Action<BirdRooting, RootContainer> OnStartRooting, OnEndRooting;
+
     public KeyCode rootKey = KeyCode.E;
 
     public FloatVariable rootTime = 3f;
+
+    public Transform holdPos;
 
     public bool IsRooting
     {
@@ -58,11 +62,13 @@ public class BirdRooting : MonoBehaviour
             return;
         target = container;
         IsRooting = true;
+        OnStartRooting?.Invoke(this, target);
         StartCoroutine(DoRooting());
     }
 
     void StopRooting()
     {
+        OnEndRooting?.Invoke(this, target);
         target = null;
         IsRooting = false;
         StopAllCoroutines();
@@ -74,7 +80,7 @@ public class BirdRooting : MonoBehaviour
         item = target.SpawnItem();
         if (item != null)
         {
-            item.transform.position = transform.position;
+            item.transform.position = holdPos != null ? holdPos.position : transform.position;
             item.transform.SetParent(transform);
         }
         StopRooting();

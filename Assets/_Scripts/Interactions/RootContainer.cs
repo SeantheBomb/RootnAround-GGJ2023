@@ -5,6 +5,8 @@ using UnityEngine;
 public class RootContainer : MonoBehaviour
 {
 
+    public System.Action OnDepleted;
+
     public RootItem item;
 
     public int quantity = 1;
@@ -30,6 +32,8 @@ public class RootContainer : MonoBehaviour
             return null;
         }
         quantity--;
+        if (quantity == 0)
+            OnDepleted?.Invoke();
         return Instantiate(item, transform.position, Quaternion.identity);
     }
 }
