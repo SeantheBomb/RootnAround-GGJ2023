@@ -1863,6 +1863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nest (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3394352203277243418, guid: 2c2a6bed4019e8247a8c9f23fe3aa1c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c2a6bed4019e8247a8c9f23fe3aa1c2, type: 3}
 --- !u!1 &1546436526
@@ -2859,6 +2863,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 948780147077398099, guid: c78bad5046acd8342bff8134a56b2542, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 948780147077398109, guid: c78bad5046acd8342bff8134a56b2542, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2912,6 +2920,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3394352203277243398, guid: 2c2a6bed4019e8247a8c9f23fe3aa1c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3394352203277243417, guid: 2c2a6bed4019e8247a8c9f23fe3aa1c2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3074,6 +3086,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1075220003, guid: dc2f5cae6546405408fe6a454e72eba6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3713681401495818371, guid: dc2f5cae6546405408fe6a454e72eba6, type: 3}
       propertyPath: m_RootOrder
       value: 5

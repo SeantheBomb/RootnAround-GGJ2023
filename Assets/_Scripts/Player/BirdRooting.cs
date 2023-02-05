@@ -7,6 +7,7 @@ public class BirdRooting : MonoBehaviour
 {
 
     public static System.Action<BirdRooting, RootContainer> OnStartRooting, OnEndRooting;
+    public static System.Action OnGetItem, OnDropItem;
 
     public KeyCode rootKey = KeyCode.E;
 
@@ -97,6 +98,7 @@ public class BirdRooting : MonoBehaviour
             item.transform.position = holdPos != null ? holdPos.position : transform.position;
             item.transform.SetParent(transform);
             Shout.Show("You found some food, bring it back to your nest!", 3f);
+            OnGetItem?.Invoke();
         }
         StopRooting();
     }
@@ -107,6 +109,7 @@ public class BirdRooting : MonoBehaviour
             return;
         nest.AddItem(item);
         item = null;
+        OnDropItem?.Invoke();
     }
 
 
