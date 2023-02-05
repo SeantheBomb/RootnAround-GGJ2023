@@ -9,11 +9,17 @@ public class NestContainer : MonoBehaviour
     public static System.Action<int> OnAddItem;
 
     public List<RootItem> items;
+
+    public GameObject playerPrefab;
+    public Transform spawnPlayerPoint;
+
     Collider2D c;
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return null;
         c = GetComponent<Collider2D>();
+        Instantiate(playerPrefab, spawnPlayerPoint.position, Quaternion.identity);
     }
 
     public void AddItem(RootItem item)
