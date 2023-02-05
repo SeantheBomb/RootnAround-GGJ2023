@@ -12,6 +12,8 @@ public class BirdPoisonEffector : MonoBehaviour
         new HalfFlyHeightPoisonEffect()
     };
 
+    public System.Action OnPoisonStart, OnPoisonStop;
+
 
     private void Start()
     {
@@ -25,9 +27,11 @@ public class BirdPoisonEffector : MonoBehaviour
 
     IEnumerator DoPoison(PoisonEffect effect)
     {
+        OnPoisonStart?.Invoke();
         effect.StartEffect(this);
         yield return new WaitForSeconds(effect.Duration);
         effect.StopEffect(this);
+        OnPoisonStop?.Invoke();
     }
     
 }

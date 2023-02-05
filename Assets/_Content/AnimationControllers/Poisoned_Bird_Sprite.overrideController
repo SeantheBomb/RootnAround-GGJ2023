@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Poisoned_Bird_Sprite
+  m_Controller: {fileID: 9100000, guid: db360eb22d944a545b537f5071a21201, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: bb768249ad64a344bbcbc21560a3528f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6f33f721a588beb42a618385ab43090c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3b552a9ffb5e12b488ec42d81a0529f9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c2bd22ad5671d384ba503511c564883a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 72ca2e5dcdb2d0e419e84505ec9536de, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cf15594457e82fb42a482d9d22f3a2ff, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a5a318042d8834841b98944a8962c2b3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f0ef85c3f4ec84f4ea0fe59127c8904d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5862c539510aa7c47aaec4e2f02633ca, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3f29f1ae0056e0d4aa2c1e6c6aea257e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6833cbf03f40ee144a3865462c141023, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2a19f66bba3b7a74ea4f9c97a895f8ae, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 170195c615ddab34391a52ac11ab406c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 30b82eaae358a4b49a170a22f72cded0, type: 2}

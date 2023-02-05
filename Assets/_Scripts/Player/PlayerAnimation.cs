@@ -28,6 +28,8 @@ public class PlayerAnimation : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (damage == null)
+            return;
         damage.OnTakeDamage -= OnTakeDamage;
         damage.OnRecover -= OnRecover;
     }
