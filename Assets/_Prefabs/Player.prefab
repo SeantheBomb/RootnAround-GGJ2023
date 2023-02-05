@@ -289,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 0}
   rooting: {fileID: 0}
+  damage: {fileID: 0}
 --- !u!61 &948780145966101437
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -361,6 +362,8 @@ GameObject:
   - component: {fileID: 948780147077398108}
   - component: {fileID: 948780147077398111}
   - component: {fileID: 948780147077398110}
+  - component: {fileID: 289050135}
+  - component: {fileID: 289050136}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -546,3 +549,36 @@ MonoBehaviour:
     ConstantValue: 3
     Variable: {fileID: 0}
   holdPos: {fileID: 948780146899777096}
+--- !u!114 &289050135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948780147077398097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957b9a91dfd439a47930ea513265ac5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitCooldown:
+    _useConstant: 1
+    ConstantValue: 3
+    Variable: {fileID: 0}
+  stunTime:
+    _useConstant: 1
+    ConstantValue: 3
+    Variable: {fileID: 0}
+  IsImmune: 0
+--- !u!114 &289050136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948780147077398097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a17797f06bee2c4b882a663a2fd03c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

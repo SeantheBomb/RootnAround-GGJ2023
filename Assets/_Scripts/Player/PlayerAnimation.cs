@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class PlayerAnimation : MonoBehaviour
 
     public BirdMovement movement;
     public BirdRooting rooting;
+    public BirdDamage damage;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,16 @@ public class PlayerAnimation : MonoBehaviour
         anim = GetComponent<Animator>();
         if (movement == null) movement = GetComponentInParent<BirdMovement>();
         if (rooting == null) rooting = GetComponentInParent<BirdRooting>();
+        if (damage == null) damage = GetComponentInParent<BirdDamage>();
+
+        damage.OnTakeDamage += OnTakeDamage;
+        damage.OnRecover += OnRecover;
+    }
+
+    private void OnDestroy()
+    {
+        damage.OnTakeDamage -= OnTakeDamage;
+        damage.OnRecover -= OnRecover;
     }
 
     private void Update()
@@ -26,4 +38,15 @@ public class PlayerAnimation : MonoBehaviour
         anim.SetBool("IsFlapping", movement.isFlapping);
         anim.SetBool("IsRooting", rooting.IsRooting);
     }
+
+    private void OnTakeDamage()
+    {
+        anim.SetTrigger("Hurt");
+    }
+
+    private void OnRecover()
+    {
+        anim.SetTrigger("HurtRecover");
+    }
+
 }
