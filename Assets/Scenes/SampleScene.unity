@@ -2908,6 +2908,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3632995804933169529, guid: 2f149490094fec14a864005c2836d1be, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3632995805417679146, guid: 2f149490094fec14a864005c2836d1be, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3013,6 +3017,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2041165199, guid: dc2f5cae6546405408fe6a454e72eba6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3713681401495818371, guid: dc2f5cae6546405408fe6a454e72eba6, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -3299,8 +3307,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7022269945530795625, guid: 9f3dd054d8348dc4e93c6156ac288cff, type: 3}
+      propertyPath: quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022269945530795625, guid: 9f3dd054d8348dc4e93c6156ac288cff, type: 3}
       propertyPath: percentOfPoison.ConstantValue
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7022269945530795626, guid: 9f3dd054d8348dc4e93c6156ac288cff, type: 3}
       propertyPath: m_Name

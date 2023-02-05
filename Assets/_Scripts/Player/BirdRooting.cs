@@ -14,6 +14,8 @@ public class BirdRooting : MonoBehaviour
 
     public Transform holdPos;
 
+    public GameObject buttonPrompt;
+
     public bool IsRooting
     {
         get; protected set;
@@ -34,12 +36,13 @@ public class BirdRooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        buttonPrompt.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        buttonPrompt.SetActive(CanRoot() && IsCarrying == false);
         if (Input.GetKeyDown(rootKey))
         {
             StartRooting();
@@ -72,6 +75,17 @@ public class BirdRooting : MonoBehaviour
         target = null;
         IsRooting = false;
         StopAllCoroutines();
+    }
+
+    public bool CanRoot()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f);
+        if (hit.transform == null)
+            return false;
+        RootContainer container = hit.transform.GetComponentInParent<RootContainer>();
+        if (container == null)
+            return false;
+        return true;
     }
 
     IEnumerator DoRooting()
