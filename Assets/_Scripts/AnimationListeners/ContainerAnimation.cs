@@ -18,6 +18,10 @@ public class ContainerAnimation : MonoBehaviour
         BirdRooting.OnStartRooting += StartRooting;
         BirdRooting.OnEndRooting += EndRooting;
         container.OnDepleted += OnDepleted;
+        if (container.depleted)
+        {
+            OnDepleted();
+        }
     }
 
     private void OnDestroy()
