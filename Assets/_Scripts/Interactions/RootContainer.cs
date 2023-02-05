@@ -1,3 +1,4 @@
+using Corrupted;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class RootContainer : MonoBehaviour
     public RootItem item;
 
     public int quantity = 1;
+
+    public FloatVariable percentOfPoison = 0.1f;
 
     public bool depleted => quantity <= 0;
 
@@ -37,6 +40,13 @@ public class RootContainer : MonoBehaviour
         {
             return null;
         }
+
+        if(Random.Range(0,1) <= percentOfPoison)
+        {
+            BirdPoisonEffector.instance.PoisonPlayer(BirdPoisonEffector.effects[Random.Range(0, BirdPoisonEffector.effects.Length)]);
+            return null;
+        }
+
         quantity--;
         if (quantity == 0)
             OnDepleted?.Invoke();

@@ -27,6 +27,8 @@ public class BirdMovement : MonoBehaviour
         get; protected set;
     }
 
+    public float jumpModifier = 1f;
+
     Rigidbody2D body;
 
     List<Collider2D> groundCollisions = new List<Collider2D>();
@@ -57,7 +59,7 @@ public class BirdMovement : MonoBehaviour
             float dirForce = sideForce;
             if (Mathf.Sign(body.velocity.x) != Mathf.Sign(direction) && Mathf.Abs(body.velocity.x) > 0.1f)
                  dirForce *= 2;
-            body.AddForce(new Vector2(direction * dirForce, jumpForce));
+            body.AddForce(new Vector2(direction * dirForce, jumpForce * jumpModifier));
             isFlapping = true;
         }
         else if (Input.GetKey(jumpKey) == false)
