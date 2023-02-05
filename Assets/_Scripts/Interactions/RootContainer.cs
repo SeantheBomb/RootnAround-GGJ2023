@@ -41,7 +41,7 @@ public class RootContainer : MonoBehaviour
             return null;
         }
 
-        if(Random.Range(0,1) <= percentOfPoison)
+        if(Random.Range(0f,1f) <= percentOfPoison)
         {
             BirdPoisonEffector.instance.PoisonPlayer(BirdPoisonEffector.effects[Random.Range(0, BirdPoisonEffector.effects.Length)]);
             return null;
