@@ -32,6 +32,7 @@ public class NestContainer : MonoBehaviour
         item.transform.parent = transform;
         item.transform.position = GetPlacePoint();
         OnAddItem?.Invoke(items.Count);
+        Shout.Show("You did it! But there's still more birds to feed...");
     }
 
     public void ClearItems()

@@ -44,6 +44,7 @@ public class RootContainer : MonoBehaviour
         if(Random.Range(0f,1f) <= percentOfPoison)
         {
             BirdPoisonEffector.instance.PoisonPlayer(BirdPoisonEffector.effects[Random.Range(0, BirdPoisonEffector.effects.Length)]);
+            Shout.Show("Oh no! You ate some rotten food...", 3f);
             return null;
         }
 

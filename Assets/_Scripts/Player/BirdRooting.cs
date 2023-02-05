@@ -96,6 +96,7 @@ public class BirdRooting : MonoBehaviour
         {
             item.transform.position = holdPos != null ? holdPos.position : transform.position;
             item.transform.SetParent(transform);
+            Shout.Show("You found some food, bring it back to your nest!", 3f);
         }
         StopRooting();
     }

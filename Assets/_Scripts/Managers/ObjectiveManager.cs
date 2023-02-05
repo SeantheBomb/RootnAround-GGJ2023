@@ -19,6 +19,10 @@ public class ObjectiveManager : MonoBehaviour
         yield return null;
         StartLevel(level);
         NestContainer.OnAddItem += CheckLevelComplete;
+
+        yield return new WaitForSeconds(1f);
+
+        Shout.Show("Bring food to your nest before your eggs hatch!!!", 5f);
     }
 
     public void StartLevel()

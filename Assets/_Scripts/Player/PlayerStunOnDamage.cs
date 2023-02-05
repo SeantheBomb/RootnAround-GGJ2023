@@ -33,6 +33,7 @@ public class PlayerStunOnDamage : MonoBehaviour
     {
         move.enabled = false;
         rooting.enabled = false;
+        Shout.Show("Ouch!");
     }
 
     private void EndStun()
