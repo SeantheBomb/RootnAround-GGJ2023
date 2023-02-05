@@ -29,6 +29,8 @@ public class BirdMovement : MonoBehaviour
 
     Rigidbody2D body;
 
+    List<Collider2D> groundCollisions = new List<Collider2D>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,10 +44,10 @@ public class BirdMovement : MonoBehaviour
         UpdateJump();
     }
 
-    private void FixedUpdate()
-    {
-        UpdateIsGrounded();
-    }
+    //private void FixedUpdate()
+    //{
+    //    UpdateIsGrounded();
+    //}
 
 
     void UpdateJump()
@@ -75,15 +77,37 @@ public class BirdMovement : MonoBehaviour
         SetPlayerDirection(direction);
     }
 
-    void UpdateIsGrounded()
+    //void UpdateIsGrounded()
+    //{
+    //    //body.i
+    //    if(Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance))
+    //    {
+    //        isGrounded = true;
+    //    }
+    //    else
+    //    {
+    //        isGrounded = false;
+    //    }
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance))
+        if(collision.GetContact(0).point.y <= transform.position.y)
         {
+            groundCollisions.Add(collision.collider);
             isGrounded = true;
-        }
-        else
+        }   
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (groundCollisions.Contains(collision.collider))
         {
-            isGrounded = false;
+            groundCollisions.Remove(collision.collider);
+            if (groundCollisions.Count <= 0)
+            {
+                isGrounded = false;
+            }
         }
     }
 
