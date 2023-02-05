@@ -42,7 +42,7 @@ public class NestEggView : MonoBehaviour
         }
         else
         {
-            StartCoroutine(LerpView(count));
+            if(gameObject.activeInHierarchy)StartCoroutine(LerpView(count));
         }
     }
 
