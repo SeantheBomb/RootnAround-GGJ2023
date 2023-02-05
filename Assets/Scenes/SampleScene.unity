@@ -2787,35 +2787,6 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!1 &2041165195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3713681401495818373, guid: dc2f5cae6546405408fe6a454e72eba6, type: 3}
-  m_PrefabInstance: {fileID: 3713681403230790926}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2041165199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041165195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06a5aff0195ba2d478ea1dc8b32126b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minItems:
-    _useConstant: 1
-    ConstantValue: 1
-    Variable: {fileID: 0}
-  maxItems:
-    _useConstant: 1
-    ConstantValue: 30
-    Variable: {fileID: 0}
-  maxItemsPerContainer:
-    _useConstant: 1
-    ConstantValue: 3
-    Variable: {fileID: 0}
 --- !u!1001 &948780146358346453
 PrefabInstance:
   m_ObjectHideFlags: 0

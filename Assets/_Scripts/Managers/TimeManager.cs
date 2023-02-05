@@ -11,6 +11,8 @@ public class TimeManager : MonoBehaviour
     /// </summary>
     public static System.Action<float, float> OnTimeUpdate;
 
+    public static System.Action OnTimeUp;
+
     public FloatVariable totalTime;
     public float timeRemaining;
 
@@ -46,6 +48,7 @@ public class TimeManager : MonoBehaviour
             timeRemaining -= 1f;
             OnTimeUpdate?.Invoke(totalTime, timeRemaining);
         }
+        OnTimeUp?.Invoke();
     }
 
 }

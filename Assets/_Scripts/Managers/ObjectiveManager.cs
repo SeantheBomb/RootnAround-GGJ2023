@@ -9,7 +9,7 @@ public class ObjectiveManager : MonoBehaviour
     public static System.Action<int> OnStartLevel, OnCompleteLevel;
     public static ObjectiveManager instance;
 
-    public int level; 
+    public static int level = 1; 
 
 
     // Start is called before the first frame update
@@ -17,7 +17,8 @@ public class ObjectiveManager : MonoBehaviour
     {
         instance = this;
         yield return null;
-        StartLevel(1);
+        StartLevel(level);
+        NestContainer.OnAddItem += CheckLevelComplete;
     }
 
     public void StartLevel()
@@ -29,6 +30,14 @@ public class ObjectiveManager : MonoBehaviour
     {
         level = i;
         StartLevel();
+    }
+
+    public void CheckLevelComplete(int i)
+    {
+        if(i >= level)
+        {
+            CompleteLevel();
+        }
     }
 
     public void CompleteLevel()
