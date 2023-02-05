@@ -135,3 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3471064767326724d91dc419a6cab114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  key:
+    _useConstant: 1
+    ConstantValue: Bees
+    Variable: {fileID: 0}

@@ -652,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330719123198523035, guid: b8fef66a2a8d4f74da3125cb927bd4cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.005297
+      value: 13.22
       objectReference: {fileID: 0}
     - target: {fileID: 6330719123198523035, guid: b8fef66a2a8d4f74da3125cb927bd4cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1124,7 +1124,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3341,7 +3341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7022269945530795671, guid: 9f3dd054d8348dc4e93c6156ac288cff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.17
+      value: -6.6
       objectReference: {fileID: 0}
     - target: {fileID: 7022269945530795671, guid: 9f3dd054d8348dc4e93c6156ac288cff, type: 3}
       propertyPath: m_LocalPosition.y

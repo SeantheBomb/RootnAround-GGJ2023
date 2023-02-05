@@ -1,3 +1,4 @@
+using Corrupted;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,17 @@ using UnityEngine;
 public class DamageTrigger : MonoBehaviour
 {
 
+    public static System.Action<BirdDamage, string> OnDamage;
+
+    public StringVariable key;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         BirdDamage bird = collision.GetComponentInParent<BirdDamage>();
         if(bird != null)
         {
             bird.TakeDamage();
+            OnDamage?.Invoke(bird, key);
         }
     }
 
@@ -21,6 +27,7 @@ public class DamageTrigger : MonoBehaviour
         if (bird != null)
         {
             bird.TakeDamage();
+            OnDamage?.Invoke(bird, key);
         }
     }
 
