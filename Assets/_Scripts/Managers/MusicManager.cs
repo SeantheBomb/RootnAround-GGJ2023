@@ -21,20 +21,29 @@ public class MusicManager : MonoBehaviour
         audio.loop = true;
         audio.Play();
         SceneManager.sceneLoaded += OnSceneLoad;
+        MainMenuController.OnMenuStart += OnMenuStart;
     }
 
     private void OnSceneLoad(Scene arg0, LoadSceneMode arg1)
     {
         if(arg0.name == "GameScene")
         {
+            if (audio.clip == gameMusic)
+                return;
             StartGameScene();
-            SceneManager.sceneLoaded -= OnSceneLoad;
+            //SceneManager.sceneLoaded -= OnSceneLoad;
         }
     }
 
     void StartGameScene()
     {
         audio.clip = gameMusic;
+        audio.Play();
+    }
+
+    void OnMenuStart()
+    {
+        audio.clip = menuMusic;
         audio.Play();
     }
 

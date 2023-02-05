@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+
+    public Leaderboard leaderboard;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +22,9 @@ public class LevelManager : MonoBehaviour
         TimeManager.OnTimeUp -= LoadGameOver;
     }
 
-    private void OnCompleteLevel(int obj)
+    private void OnCompleteLevel(int level)
     {
+        leaderboard.UpdateScore((int)(level * TimeManager.timeRemaining));
         LoadLevelComplete();
     }
 

@@ -14,7 +14,7 @@ public class TimeManager : MonoBehaviour
     public static System.Action OnTimeUp;
 
     public FloatVariable totalTime;
-    public float timeRemaining;
+    public static float timeRemaining;
 
     public bool isRunning = true;
 

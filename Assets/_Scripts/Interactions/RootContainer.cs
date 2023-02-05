@@ -29,6 +29,13 @@ public class RootContainer : MonoBehaviour
         ContainerManager.RemoveContainer(this);
     }
 
+    public void SetQuantity(int num)
+    {
+        quantity = num;
+        if (quantity <= 0)
+            OnDepleted?.Invoke();
+    }
+
     public RootItem SpawnItem()
     {
         if (item == null)

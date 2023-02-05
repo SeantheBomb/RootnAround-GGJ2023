@@ -174,6 +174,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 56035677877768913, guid: 8890cb8799700a84ea8cc6043c13df25, type: 3}
+      propertyPath: leaderboard
+      value: 
+      objectReference: {fileID: 11400000, guid: 0a4868e3a8fbad84380b7e4666323d33, type: 2}
     - target: {fileID: 56035677877768914, guid: 8890cb8799700a84ea8cc6043c13df25, type: 3}
       propertyPath: m_Name
       value: Bootstrapper

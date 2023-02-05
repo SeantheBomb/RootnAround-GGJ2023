@@ -23,6 +23,12 @@ public class ArrowController : MonoBehaviour
         objective = FindObjectOfType<NestContainer>(false).transform;
     }
 
+    private void OnDestroy()
+    {
+        BirdRooting.OnGetItem -= ShowImage;
+        BirdRooting.OnDropItem -= HideImage;
+    }
+
     void Update()
     {
         if (image.enabled == false)

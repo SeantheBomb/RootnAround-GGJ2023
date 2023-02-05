@@ -49,7 +49,7 @@ public class ContainerManager : MonoBehaviour
             int quantity = Random.Range(spawned < min ? 1 : 0, perContainer);
             total -= quantity;
             spawned += quantity;
-            c.quantity = quantity;
+            c.SetQuantity(quantity);
         }
     }
 }
